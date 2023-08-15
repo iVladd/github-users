@@ -17,19 +17,19 @@ const UserCard = () => {
 
   if (user.message) return <h2 className={styles.message}>No such a user</h2>;
 
-  return (
-    user.id && (
-      <div className={styles.card}>
-        <img src={user.avatar_url} alt="User Avatar" className={styles.image} />
-        <div className={styles.info}>
-          <h3 className={styles.username}>{user.login}</h3>
-          <p className={styles.bio}>{user.bio}</p>
-          <a href={user.html_url} target="_blank" className={styles.link}>
-            GitHub Link
-          </a>
-        </div>
+  return user.id ? (
+    <div className={styles.card}>
+      <img src={user.avatar_url} alt="User Avatar" className={styles.image} />
+      <div className={styles.info}>
+        <h3 className={styles.username}>{user.login}</h3>
+        <p className={styles.bio}>{user.bio}</p>
+        <a href={user.html_url} target="_blank" className={styles.link}>
+          GitHub Link
+        </a>
       </div>
-    )
+    </div>
+  ) : (
+    <h2 className={styles.message}>Try to find github user by username</h2>
   );
 };
 
