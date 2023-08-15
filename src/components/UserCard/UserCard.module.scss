@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #b3b3b3;
+  border-radius: 10px;
+}
+
+.image {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  width: 300px;
+}
+
+.username {
+  font-size: 28px;
+}
+
+.bio {
+  margin-top: 5px;
+}
+
+.link {
+  display: block;
+  margin-top: 10px;
+}
+
+.message {
+  margin-top: 20%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+  .image {
+    width: 200px;
+  }
+  .username,
+  .bio,
+  .link {
+    text-align: center;
+  }
+}
